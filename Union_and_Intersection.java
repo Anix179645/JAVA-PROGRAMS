@@ -1,4 +1,4 @@
-//This method assumes that there is no duplicates
+//This method assumes that there are no duplicates
 //Use hash set as they don't accept duplicate elements..if duplicates are entered it doesn't count or retain that
 package any;
 
