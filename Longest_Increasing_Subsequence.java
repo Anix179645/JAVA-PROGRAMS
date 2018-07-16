@@ -5,7 +5,7 @@ package any;
     public class LoInSu{
             static int lis(int arr[],int n)
             {
-                int lis[] = new int[n];
+                Integer lis[] = new Integer[n];
                 int i,j,max = 0;
                 for ( i = 0; i < n; i++ )
                     lis[i] = 1;
@@ -15,10 +15,7 @@ package any;
                             lis[i] = lis[j] + 1;
                 for (int x:lis) System.out.print(x);
                 System.out.println();
-                for ( i = 0; i < n; i++ )
-                    if ( max < lis[i] )
-                        max = lis[i];
-
+                max=Collections.max(Arrays.asList(lis));
                 return max;
             }
 
