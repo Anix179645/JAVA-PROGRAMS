@@ -8,7 +8,7 @@ class BinaryHeap{
 
     BinaryHeap(int capacity){
         heapsize=0;
-        heap=new int[capacity+1];
+        heap=new int[capacity];
         Arrays.fill(heap,-1);
     }
     int parent(int i){
@@ -59,7 +59,7 @@ class BinaryHeap{
         int tmp=heap[ind];
         while(kthchild(ind,1)<heapsize){
             child=minchild(ind);
-            if(tmp>heap[child]) heap[ind]=heap[child];
+            if(tmp>heap[child]) {heap[ind]=heap[child];heap[child]=tmp;}
             else break;
             ind=child;
         }
@@ -103,6 +103,7 @@ public class Main {
                     {
                         System.out.println("Enter integer element to insert");
                         bh.insert( scan.nextInt() );
+                        bh.printHeap();
                     }
                     catch (Exception e)
                     {
