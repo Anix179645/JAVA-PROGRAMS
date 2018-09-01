@@ -30,8 +30,6 @@ public class BST_Insertion {
             temp1 = new Node(key);
             root = temp1;
             return;
-
-
         }
         Queue<Node> q = new LinkedList<Node>();
         q.add(temp1);
